@@ -8,6 +8,7 @@ This script was developed and tested on Debian 9.
 It should work on other Debian-based Linux distribution.
 
 ## Configuration
+0. Init your borg repo with ```borg init``` command. Check https://borgbackup.readthedocs.io/en/stable/quickstart.html for more information.
 1. Clone the repository in the /etc/backups directory: ```sudo clone https://github.com/jeremyfritzen/storj_earnings_notify.git /etc/backups/automated-borg-backup```
 2. Add Disk IDs in the backup.disks file. The backup will be launched only if one of these disks is plugged-in.
 3. Copy general.conf.template file and rename it "general.conf". This will will allow to configure the backup script (pushbullet access, etc.)
