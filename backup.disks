@@ -1,0 +1,2 @@
+#Add your backup disks IDs (UUID) at the end of this file
+#To find the UUID of the file system that backups, run the following command: lsblk -o+uuid,label

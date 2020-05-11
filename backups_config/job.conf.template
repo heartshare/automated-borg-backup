@@ -1,0 +1,43 @@
+# Borg job configuration file
+# Edit this file to configure a new backup job and remove ".template" from the filename
+
+BACKUP_NAME=""
+BORG_PASSPHRASE=""
+
+#----------------------------#
+#  BACKUP JOB CONFIGURATION  #
+#----------------------------#
+
+# Custom variables
+# Define here your own variables to be used in the commands defined in this configuration file
+
+
+# Choose one of the following backup method:
+#    - local: will backup local files
+#    - remote: will useborg serve through ssh connection to the host to be backuped
+#    - NFS: will mount remote NFS share to be backuped
+BACKUP_TYPE="local"
+#BACKUP_TYPE="remote"
+#BACKUP_TYPE="NFS"
+
+
+# Define data or server to be backuped
+# For local or NFS backup types, specifiy the directories to be backuped.
+# For remote backup type, specify the ssh destination like this: <user>@hostname
+BACKUP_SOURCE=""
+
+# Define borg backup repository where to backup source data
+# This variable does nothing for remote type backup since the destination is defined by the remote server.
+BACKUP_DEST=""
+
+# Define the commands to be exectued before and after the backup
+# PRE_BACKUP and POST_BACKUP variables are tables. Each command must be define in quotes "" and separate by a space.
+# For a variable easier to read, it is recommended to write one command per line by adding a slash / after each command block.
+# EXAMPLE:
+#      PRE_BACKUP=("echo $BACKUP_NAME: creating arcive" \
+#      "tar -cf archive.tar /path_to_repository/" \
+#       )
+
+PRE_BACKUP=("") 
+
+POST_BACKUP=("")

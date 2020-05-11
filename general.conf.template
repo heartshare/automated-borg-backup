@@ -1,0 +1,16 @@
+# General Borg configuration file
+# Edit this file to configure the main automated-borg-backup script
+
+#----------------------------------------------#
+#  AUTOMATED BORG BACKUP SCRIPT CONFIGURATION  #
+#----------------------------------------------#
+
+# The backup partition is mounted there. Do not put "/" at the end of the path.
+MOUNTPOINT=
+
+# The remote shares to be backuped are mounted there. Do not put "/" at the end of the path.
+MOUNTPOINT_SOURCE=
+
+# Pushbullet configuration
+PUSHBULLET_KEY=""
+PUSHBULLET_DEVICE=""
